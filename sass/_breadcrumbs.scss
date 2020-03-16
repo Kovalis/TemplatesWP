@@ -1,0 +1,29 @@
+.breadcrumbs{
+	padding: 28px 0 0;
+	.container{
+		display: flex;
+		align-items: center;
+	}
+	a{
+		display: block;
+		text-decoration: none;
+		font-size: 10px;
+		position: relative;
+		color: #828282;
+		&:not(:first-child){
+			padding-left: 24px;
+			&:after{
+				content: "";
+				width: 10px;
+				height: 10px;
+				display: block;
+				position: absolute;
+				right: 6px;
+				top: calc(50% - 5px);
+				background: url(../images/select_arrow.svg) no-repeat center;
+				background-size: 6px;
+				transform: rotate(-90deg);
+			}
+		}
+	}
+}

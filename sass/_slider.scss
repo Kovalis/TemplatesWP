@@ -1,0 +1,62 @@
+.owl-prev, .owl-next{
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #E0E0E0;
+  border-radius: 50px;
+  position: absolute;  
+  bottom: 0;
+  top: auto;
+  cursor: pointer;
+  @include transition(0.3s);
+  &:hover{
+    background-color: #ebd354 !important;
+    .slider-arrow{
+      svg{
+        *{
+          fill: #fff;
+        }
+      }
+    }
+  }
+}
+.owl-prev{
+  left: calc(50% - 503px);
+}
+.owl-next{
+  right: calc(50% - 503px);
+  .slider-arrow{
+    -webkit-transform: rotate(-180deg); /* Для Safari, Chrome, iOS */
+    transform: rotate(-180deg); 
+  }
+}
+.wrap-arrows{
+  position: relative;
+  z-index: 99;
+}
+/* dots */
+.owl-dots{
+  position: relative;
+  bottom: 20px;
+  display: flex;
+  justify-content: center;
+ .owl-dot{
+    content: "" !important;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    width: 12px !important;
+    height: 12px !important;
+    opacity: 0.36 !important;
+    float: left;
+    background-color: rgb(255, 255, 255);
+    margin-right: 10px;
+    &.active{
+       opacity: 1 !important;
+    }
+    &:last-child{
+      margin-right: 0;
+    }
+  }
+}

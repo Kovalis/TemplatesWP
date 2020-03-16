@@ -1,0 +1,175 @@
+.modal-dialog{
+  background-color: rgb(255, 255, 255);
+  box-shadow: 0px 13px 40px 0px rgba(0, 0, 0, 0.15);
+  width: 624px;
+  margin: 0 auto;
+  top: 50px;
+  max-width: none;
+  height: auto;
+  border-radius: 3px;
+  background: #fff;
+  z-index: 1072;
+  pointer-events: visible;
+  padding: 50px;
+  .callback_title{
+    padding: 3px 0 2px;
+    font-size: 37px;
+    color: rgb(40, 40, 40);
+  }
+  p{
+    text-align: center;
+    margin: 0 30px 30px;
+    font-size: 12px;
+  }
+  // input::placeholder{
+  //   color:#282828;
+  // }
+  button{
+    margin-top: 0;
+    cursor: pointer;
+  }
+}
+  .callback{
+    padding: 10px 20px;
+    > span{
+      font-size: 17px;
+      color: rgb(97, 97, 97);
+      line-height: 1.294;
+      text-align: center;
+      display: block;
+      margin-bottom: 30px;
+    }
+    &-input{
+      position: relative;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      z-index: 1;
+      .callback-input__placeholder{
+        font-size: 16px;
+        position: absolute;
+        top: 15px;
+        left: 0px;
+        margin: 0;
+        color: #333333;
+        z-index: -1;
+        font-weight: 100;
+        @include transition(0.3s);
+        span{
+          color: red !important;
+        }
+        &.active{
+          top: -12px;
+          font-size: 12px;
+          color: #50c900;
+          z-index: 0;
+          span{
+            display: none;
+          }
+        }
+      }
+      input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=hidden]), textarea, select{
+        margin-bottom: 0;
+        font-weight: 100;
+        &::placeholder{
+          font-weight: 100;
+          font-size: 15px;
+          color: rgb(51, 51, 51);
+        }
+      }
+      textarea{
+        resize: none;
+      }
+    }
+  }
+.close_button_popup {
+    background: url(../images/close-button.svg) no-repeat center;
+    background-size: 21px;
+    content: "";
+    display: block;
+    width: 30px;
+    height: 30px;
+    font-size: 24px;
+    line-height: 30px;
+    top: 25px;
+    right: 25px;
+    color: #fff;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.6s ease;
+    &:hover, &:focus{
+      -webkit-transform: rotate(360deg);
+      -moz-transform: rotate(360deg);
+      -o-transform: rotate(360deg);
+      transform: rotate(360deg);
+    }
+}
+.js_video .modal-dialog {
+    height: 700px;
+    max-width: 1200px;
+    background: transparent;
+    box-shadow: none;
+}
+  .modal_confid{
+    font-size: 12px;
+    color: #cccccc;
+    margin-bottom: 0 !important;
+    margin-top: 20px !important;
+    a{
+      color: #cccccc;
+    }
+  }
+.text_form{
+  h2{
+    font-size: 18px;
+    color: rgb(0, 0, 0);
+    font-family: bold;
+    margin-bottom: 23px;
+  }
+  p, li{
+    font-size: 16px !important;
+    text-align: left !important;
+    color: rgb(0, 0, 0);
+    line-height: 1.2;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  ol, ul{
+    margin-bottom: 30px;
+    padding-left: 15px;
+  }
+}
+@media (max-width: 991px){
+  .modal-dialog{
+    height: auto;
+  }
+}
+@media (max-width: 767px){
+  .modal-dialog{
+      width: 100% !important; 
+      padding: 50px 0;
+      top: 50px;
+      margin: 0;
+  }
+  .js_video .close_button_popup{
+      top: -30px;
+      right: 10px;
+  }
+  .modal{
+    padding: 0 !important;
+  }
+  .success_form{
+      overflow-x: hidden;
+      overflow-y: auto;
+      .callback_title{
+        font-size: 29px;
+      }
+      p{
+         margin: 0 0 49px;
+      }
+  }
+}

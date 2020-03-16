@@ -1,0 +1,17 @@
+.logo_svg{
+	width: 26px;
+	height: 26px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	svg{
+		width: 100%;
+		height: 100%;
+		display: block;
+		margin: 0 auto;
+		*{
+			fill: #f2af66;
+			@include transition(0.3s);
+		}
+	}
+}

@@ -1,0 +1,32 @@
+.dropdown{
+	display: inline-flex;
+	position: relative;
+	min-width: 119px;
+	max-width: 100%;
+	min-height: 34px;
+	.dropdown-toggle{
+		border: 1px solid #DCDCDC;
+		border-radius: 40px;
+		padding: 9px 28px 9px 18px;
+		font-size: 14px;
+		font-weight: normal;
+		color: rgb(51, 51, 51);
+		align-items: center;
+		width: 100%;
+		display: inline-flex;
+		&:after{
+			content: "";
+			display: block;
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			top: calc(50% - 10px);
+			right: 10px;
+			border: none;
+			background: url(../images/select_arrow.svg) no-repeat center;
+			-webkit-background-size: 12px;
+			background-size: 12px;
+			margin-left: 0;
+		}
+	}
+}

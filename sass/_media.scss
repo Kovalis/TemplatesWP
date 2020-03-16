@@ -1,0 +1,42 @@
+@media (min-width: 1920px){
+
+}
+@media (min-width: 1278px){
+
+}
+@media (min-width: 576px){
+
+}
+@media (min-width: 992px){
+
+}
+@media (min-width: 768px){
+    header .main-menu__menu{
+        align-items: center;
+        display: flex;
+        >li:hover{
+            // .sub-menu{
+            //     padding-top: 98px;
+            //     padding-bottom: 48px;
+            // }
+        }
+        >li{
+            margin-right: 10px;
+        }
+    }
+}
+@media (max-width: 1277px){
+ 
+}
+@media (max-width: 1277px) and (min-width: 992px){
+
+}
+@media (max-width: 991px){
+ 
+}
+@media (max-width: 991px) and (min-width: 768px){
+
+}
+@media (max-width: 767px){
+
+}

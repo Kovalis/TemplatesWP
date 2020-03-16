@@ -1,0 +1,31 @@
+.wrap_input{
+  position: relative;
+  margin-bottom: 20px;
+  &:hover, &:focus{
+    .wpcf7-not-valid-tip{
+      display: none;
+    }
+  }
+}
+.wpcf7-not-valid-tip {
+    color: #f00;
+    font-weight: normal;
+    display: block;
+    position: absolute;
+    top: calc(50% - 10px);
+    right: 13px;
+    text-align: right;
+    background: url(../images/warning.svg) no-repeat;
+    background-size: 20px;
+    font-size: 0px !important;
+    height: 20px;
+    width: 20px;
+}
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing {
+    border: none;
+    color: #ff0000;
+}
+div.wpcf7-mail-sent-ok {
+    border: none;
+    color: #398f14;
+}

@@ -1,0 +1,235 @@
+$fontSizeh1: 30px;
+$fontSizeh2: 24px;
+$fontSizeh3: 21px;
+$fontSizeh4: 18px;
+$fontSizeh5: 17px;
+$fontSizeh6: 17px;
+$color: #000;
+$colorSecond: #EE2C3D;
+$baseFontSize: 16px;
+$marginBottomImgP: 20px;
+ @media (max-width: 767px){
+  h1, .h1{
+    font-size: 29px !important;
+  }
+  h2, .h2{
+    font-size: 25px !important;
+  }
+  h3, .h3{
+    font-size: 23px !important;
+  }
+  h4, .h4{
+    font-size: 21px !important;
+  }
+  h5,.h5{
+    font-size: 20px !important;
+  }
+  h6,.h6{
+    font-size: 18px;
+  }
+}
+*{
+  &:focus {
+    outline:0 none !important;
+  }
+}
+body {
+  font-family: "proximanova", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-weight: 100;
+  font-style: normal;
+  font-size: 13px;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1;
+  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  margin: 0;
+}
+// для модальных окон на мобильнике start
+.body-hide {
+    overflow: hidden;
+    position: relative;
+}
+// для модальных окон на мобильнике end
+
+main{
+  overflow-x: hidden;
+}
+html{
+  &.active{
+    height: auto;
+    overflow: auto;
+  }
+}
+// заполняет экран сайта, если контента мало
+.voidBlock{
+  flex: 1 0 auto;
+}
+input::-webkit-contacts-auto-fill-button {
+    opacity: 0;
+}
+strong{
+  font-weight: bold;
+}
+a{
+  color: $color;
+  &:hover, &:focus{
+    color: $color;
+  }
+  &:focus{
+   text-decoration: none !important;
+   -webkit-box-shadow: none !important;
+   box-shadow: none !important;   
+  }
+}
+p{
+  color: $color;
+  font-size: $baseFontSize;
+  margin-bottom: $marginBottomImgP;
+  img{
+    margin-bottom: $marginBottomImgP;
+  }
+}
+hr{
+  margin-top: 0px !important;
+  margin-bottom: 0 !important;
+  border-top: 1px solid rgb(208, 208, 206);
+  position: relative;
+}
+ul{
+  margin-bottom: 0;
+  margin-left: 0 !important;
+}
+li{
+  font-size: $baseFontSize;
+  line-height: 1.2;
+}
+h1,.h1{
+  font-size: $fontSizeh1;
+}
+h2,.h2{
+  font-size: $fontSizeh2;
+}
+h3,.h3{
+  font-size: $fontSizeh3;
+}
+h4,.h4{
+  font-size: $fontSizeh4;
+}
+h5,.h5,h6,.h6{
+  font-size: $fontSizeh5;
+}
+h1,h2,h3,h4,h5,h6,.h1,.h2,.h3,.h4,.h5,.h6{
+  font-weight: bold;
+  color: $color;
+  line-height: 1.2;
+}
+/* для WP start*/
+img.alignleft {
+  float: left;
+  margin-right: 1.5em;
+  max-width: 100%;
+}
+img.alignright {
+  float: right;
+  margin-left: 1.5em;
+  max-width: 100%;
+}
+img.aligncenter {
+  margin: 0 auto;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+img.alignnone{
+  max-width: 100%;
+}
+p{
+  img:nth-child(n+2):nth-last-child(1){
+    float: none;
+  }
+}
+/* для WP end*/
+input:not([type=checkbox]):not([type=radio]):not([type=file]):not([type=hidden]), textarea, select{
+  border: 1px solid rgb(233, 233, 233);
+  -webkit-appearance: none;
+  appearance: none;
+  border-radius: 0;
+  background: rgba(255,255,255,0);
+  font-size: 16px;
+  padding: 12px 0 !important;
+  width: 100%;  
+  &::placeholder{
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.478);
+  }
+}
+
+/* Прозрачность формы автозаполнения start*/
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus
+input:-webkit-autofill, 
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-animation-name: autofill;
+    -webkit-animation-fill-mode: both;
+}
+
+@-webkit-keyframes autofill {
+    to {
+        color: #000;
+        background: transparent;
+    }
+}
+/* Прозрачность формы автозаполнения end*/
+select {
+    -webkit-appearance: none;
+    appearance: none;
+    background: url(../images/select_arrow.svg) #fff no-repeat calc(100% - 14.5px);
+    background-size: 8px;
+    cursor: pointer;
+    max-height: 50px;
+    border-radius: 3px;
+    overflow: hidden;
+    padding: 12px 30px 12px 16px;
+}
+button{
+  border: none;
+  background-color: transparent;
+}
+.main-btn{
+  background-color: #1f81ab;
+  border-radius: 22px;
+  padding: 13px 24px;
+  font-weight: bold;
+  font-size: 14px;
+  display: inline-block;
+  color: #fff;
+  line-height: normal;
+  @include transition(0.3s);
+  &:hover, &:focus{
+    background-color: #0f5a79;
+    color: #fff;
+    text-decoration: none;
+  }
+}
+table{
+  width: 100%;
+  margin-bottom: $marginBottomImgP;
+}
+td{
+  border: none !important;
+  font-size: $baseFontSize;
+  color: rgb(0, 0, 0);
+  padding: 10px 5px;
+}
+.clear {
+    clear: both;
+}

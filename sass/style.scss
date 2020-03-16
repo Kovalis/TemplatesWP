@@ -1,0 +1,36 @@
+@mixin transition($count){
+	transition: $count;
+	-webkit-transition: $count;
+}
+@import "_bootstrap-4-style.scss";
+@import "_base.scss";
+@import "_header.scss";
+@import "_content_block.scss";
+@import "_content.scss";
+@import "_media.scss";
+@import "_slider.scss";
+@import "_footer.scss";
+@import "_modal.scss";
+@import "_soc.scss";
+@import "_lk.scss";
+
+
+
+//@import "_breadcrumbs.scss";
+//@import "_tabs.scss";
+//@import "_accordeon.scss";
+//@import "_search.scss";
+//@import "_badge.scss"; // таблички со значениями
+//@import "_tooltip.scss";
+//@import "_dropdown.scss";
+
+// wp start
+//@import "_wp_pagination.scss";
+//@import "_errors_wp.scss";
+// wp end
+
+// opencart start
+//@import "_opencart-pagination.scss";
+//@import "_errors_opencart.scss";
+//@import "_toasts.scss"; // всплывашка добавления в корзину
+// opencart end
